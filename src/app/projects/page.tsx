@@ -34,10 +34,10 @@ export default function ProjectsPage() {
                             </a>
                         </div>
                         <div className="flex gap-2 text-xs flex-wrap">
-                            <span className="bg-muted px-2 py-1 rounded-md">ASP.NET Core</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">SignalR</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">WhatsApp Cloud API</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">PostgreSQL</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">ASP.NET Core</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">SignalR</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">WhatsApp Cloud API</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">PostgreSQL</span>
                         </div>
                     </div>
 
@@ -47,10 +47,10 @@ export default function ProjectsPage() {
                             Designed to handle real-time communication between support agents and customers via the WhatsApp Cloud API.
                         </p>
                         <h3 className="text-foreground font-semibold mt-4 text-base">Key Features</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                            <li><strong>Real-time Messaging</strong>: Implemented SignalR for instant message delivery and status updates to agent dashboards.</li>
-                            <li><strong>WhatsApp Integration</strong>: Direct integration with Meta's Cloud API for ticket creation and media handling.</li>
-                            <li><strong>Access Control</strong>: Granular RBAC, approval flows, and budgeting logic for corporate tenants.</li>
+                        <ul className="list-disc list-inside space-y-1 text-foreground">
+                            <li><strong className="text-foreground">Real-time Messaging</strong>: Implemented SignalR for instant message delivery and status updates to agent dashboards.</li>
+                            <li><strong className="text-foreground">WhatsApp Integration</strong>: Direct integration with Meta's Cloud API for ticket creation and media handling.</li>
+                            <li><strong className="text-foreground">Access Control</strong>: Granular RBAC, approval flows, and budgeting logic for corporate tenants.</li>
                         </ul>
                     </div>
                 </section>
@@ -72,9 +72,9 @@ export default function ProjectsPage() {
                             </a>
                         </div>
                         <div className="flex gap-2 text-xs flex-wrap">
-                            <span className="bg-muted px-2 py-1 rounded-md">Node.js</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">Express.js</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">MySQL</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">Node.js</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">Express.js</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">MySQL</span>
                         </div>
                     </div>
 
@@ -84,10 +84,10 @@ export default function ProjectsPage() {
                             The system facilitates the matching and exchange of rental properties across the Netherlands.
                         </p>
                         <h3 className="text-foreground font-semibold mt-4 text-base">Key Contributions</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                            <li>Architected secure RESTful APIs to handle sensitive tenant data.</li>
-                            <li>Optimized database queries to handle complex matching algorithms between properties.</li>
-                            <li>Ensured GDPR compliance and secure data handling standards.</li>
+                        <ul className="list-disc list-inside space-y-1 text-foreground">
+                            <li><strong className="text-foreground">Secure API Architecture</strong>: Architected secure RESTful APIs to handle sensitive tenant data.</li>
+                            <li><strong className="text-foreground">Query Optimization</strong>: Optimized database queries to handle complex matching algorithms between properties.</li>
+                            <li><strong className="text-foreground">GDPR Compliance</strong>: Ensured GDPR compliance and secure data handling standards.</li>
                         </ul>
                     </div>
                 </section>
@@ -99,9 +99,9 @@ export default function ProjectsPage() {
                     <div className="flex flex-col gap-2">
                         <h2 className="text-2xl font-bold tracking-tight">Enterprise Backend Services (DataBalk)</h2>
                         <div className="flex gap-2 text-xs flex-wrap">
-                            <span className="bg-muted px-2 py-1 rounded-md">Node.js</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">Microservices</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">CI/CD</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">Node.js</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">Microservices</span>
+                            <span className="bg-muted text-foreground px-2 py-1 rounded-md">CI/CD</span>
                         </div>
                     </div>
 
@@ -110,10 +110,10 @@ export default function ProjectsPage() {
                             Currently developing and maintaining backend ecosystem for multiple production products at DataBalk.
                         </p>
                         <h3 className="text-foreground font-semibold mt-4 text-base">Key Responsibilities</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                            <li>Managing shared backend components across two concurrent products.</li>
-                            <li>Resolving critical production issues to improve system reliability (SRE).</li>
-                            <li>Collaborating with cross-functional teams to deliver features under tight deadlines in a dynamic environment.</li>
+                        <ul className="list-disc list-inside space-y-1 text-foreground">
+                            <li><strong className="text-foreground">Shared Components</strong>: Managing shared backend components across two concurrent products.</li>
+                            <li><strong className="text-foreground">Production Support</strong>: Resolving critical production issues to improve system reliability (SRE).</li>
+                            <li><strong className="text-foreground">Cross-functional Collaboration</strong>: Collaborating with cross-functional teams to deliver features under tight deadlines in a dynamic environment.</li>
                         </ul>
                     </div>
                 </section>
