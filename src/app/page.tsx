@@ -6,32 +6,38 @@ export default function Home() {
   const recentPosts = allPosts.slice(0, 3);
 
   return (
-    <div className="flex flex-col gap-12 animate-fade-in delay-100">
-      <section className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold tracking-tighter">Backend Developer & Architect</h1>
-        <p className="text-muted-foreground leading-relaxed">
-          Hi, I&apos;m Said. I build robust, scalable server-side applications.
-          I specialize in distributed systems, microservices, and high-performance databases.
-          Currently focused on optimizing cloud infrastructure.
-        </p>
-        <div className="flex gap-4 mt-2">
+    <div className="flex flex-col gap-16 animate-fade-in delay-100 pb-20">
+      {/* Hero / Bio */}
+      <section className="flex flex-col gap-6 pt-10">
+        <h1 className="text-4xl font-extrabold tracking-tighter">Backend Engineer</h1>
+        <div className="prose dark:prose-invert text-muted-foreground leading-relaxed max-w-xl">
+          <p>
+            I build the logical engines behind web applications.
+            Detailed-oriented Backend Engineer specializing in <strong>Node.js</strong> and <strong>System Architecture</strong>.
+          </p>
+          <p>
+            Currently focused on reliable distributed systems and data integrity.
+          </p>
+        </div>
+        <div className="flex gap-4 pt-2">
           <Link
-            href="mailto:contact@example.com"
-            className="px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+            href="/projects"
+            className="px-5 py-2.5 bg-foreground text-background rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Contact Me
+            View Work
           </Link>
           <Link
-            href="/blog"
-            className="px-4 py-2 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors"
+            href="/about"
+            className="px-5 py-2.5 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors"
           >
-            Read Blog
+            About Me
           </Link>
         </div>
       </section>
 
+      {/* Blog Teaser */}
       <section className="flex flex-col gap-6">
-        <h2 className="text-xl font-semibold tracking-tight">Recent Thoughts</h2>
+        <h2 className="text-xl font-bold tracking-tight">Recent Writing</h2>
         <div className="flex flex-col gap-4">
           {recentPosts.length > 0 ? (
             recentPosts.map((post) => (

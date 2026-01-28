@@ -3,22 +3,28 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
-            // Threshold: 20px
             setIsScrolled(window.scrollY > 20);
         };
 
-        // Initial check
         handleScroll();
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const links = [
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About' },
+        { href: '/projects', label: 'Work' },
+        { href: '/blog', label: 'Blog' },
+    ];
 
     return (
         <header
@@ -39,9 +45,19 @@ export function Header() {
                 >
                     Saidi M.
                 </Link>
-                <nav className="flex gap-6 text-muted-foreground">
-                    <Link href="/" className="hover:text-foreground transition-colors hover:bg-muted/50 px-3 py-1.5 rounded-md">Home</Link>
-                    <Link href="/blog" className="hover:text-foreground transition-colors hover:bg-muted/50 px-3 py-1.5 rounded-md">Blog</Link>
+                <nav className="flex gap-4 sm:gap-6 text-muted-foreground">
+                    {links.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={cn(
+                                "transition-colors hover:text-foreground hover:bg-muted/50 px-3 py-1.5 rounded-md",
+                                pathname === link.href ? "text-foreground bg-muted/50" : ""
+                            )}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </nav>
             </div>
         </header>
