@@ -92,13 +92,6 @@ export function BlogList({ posts }: BlogListProps) {
                                         ))}
                                     </div>
                                 )}
-
-                                <div className="mt-4 text-sm font-medium text-foreground/90">
-                                    <span className="inline-flex items-center gap-1">
-                                        Read article
-                                        <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-                                    </span>
-                                </div>
                             </Link>
                         </article>
                     ))

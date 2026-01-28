@@ -31,6 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
