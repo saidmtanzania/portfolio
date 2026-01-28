@@ -12,7 +12,7 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5); // Default for Server Side Match
+    const [itemsPerPage, setItemsPerPage] = useState(4); // Default for Server Side Match
 
     // Hydration fix + Responsive check
     useEffect(() => {
@@ -20,14 +20,14 @@ export function BlogList({ posts }: BlogListProps) {
         if (window.innerWidth < 768) {
             setItemsPerPage(3);
         } else {
-            setItemsPerPage(5);
+            setItemsPerPage(4);
         }
 
         const handleResize = () => {
             if (window.innerWidth < 768) {
                 setItemsPerPage(3);
             } else {
-                setItemsPerPage(5);
+                setItemsPerPage(4);
             }
         };
 
