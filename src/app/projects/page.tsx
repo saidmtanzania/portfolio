@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Projects | Saidi M.',
-    description: 'Selected backend engineering projects and case studies.',
+    title: 'Projects | Saidi Hamisi',
+    description: 'Selected backend engineering projects: WhatsApp Integration, Housing Exchange APIs, and more.',
 };
 
 export default function ProjectsPage() {
@@ -13,87 +14,108 @@ export default function ProjectsPage() {
                 <h1 className="text-3xl font-bold tracking-tighter">Selected Work</h1>
                 <p className="text-muted-foreground max-w-xl">
                     A selection of backend systems I have architected and built.
-                    Focusing on scalability, reliability, and performance.
+                    Focusing on real-time systems, multi-tenant architectures, and scalable APIs.
                 </p>
             </div>
 
             <div className="flex flex-col gap-16">
-                {/* Project 1 */}
+                {/* Project 1: TCSFS */}
                 <section className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
-                        <h2 className="text-2xl font-bold tracking-tight">High-Performance Webhook Ingestor</h2>
-                        <div className="flex gap-2 text-xs">
-                            <span className="bg-muted px-2 py-1 rounded-md">Node.js</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">Redis Streams</span>
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h2 className="text-2xl font-bold tracking-tight">TCSFS WhatsApp Support Platform</h2>
+                            <a
+                                href="https://tcsfs-ui-main.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-primary hover:underline flex items-center gap-1"
+                            >
+                                Visit Site <ExternalLink size={12} />
+                            </a>
+                        </div>
+                        <div className="flex gap-2 text-xs flex-wrap">
+                            <span className="bg-muted px-2 py-1 rounded-md">ASP.NET Core</span>
+                            <span className="bg-muted px-2 py-1 rounded-md">SignalR</span>
+                            <span className="bg-muted px-2 py-1 rounded-md">WhatsApp Cloud API</span>
                             <span className="bg-muted px-2 py-1 rounded-md">PostgreSQL</span>
                         </div>
                     </div>
 
                     <div className="prose dark:prose-invert text-sm text-muted-foreground leading-relaxed max-w-none">
                         <p>
-                            A fault-tolerant gateway designed to ingest and process over 500 webhooks per second from various payment providers during peak traffic events (flash sales).
+                            A production-grade customer support platform integrating directly with WhatsApp.
+                            Designed to handle real-time communication between support agents and customers via the WhatsApp Cloud API.
                         </p>
-                        <h3 className="text-foreground font-semibold mt-4 text-base">Key Challenges</h3>
+                        <h3 className="text-foreground font-semibold mt-4 text-base">Key Features</h3>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>Preventing API timeouts during traffic spikes.</li>
-                            <li>Ensuring strict ordering of events for key entities.</li>
-                            <li>Handling database backpressure without dropping data.</li>
+                            <li><strong>Real-time Messaging</strong>: Implemented SignalR for instant message delivery and status updates to agent dashboards.</li>
+                            <li><strong>WhatsApp Integration</strong>: Direct integration with Meta's Cloud API for ticket creation and media handling.</li>
+                            <li><strong>Access Control</strong>: Granular RBAC, approval flows, and budgeting logic for corporate tenants.</li>
                         </ul>
-                        <h3 className="text-foreground font-semibold mt-4 text-base">Solution</h3>
-                        <p>
-                            Decoupled the ingestion layer from the processing layer using <strong>Redis Streams</strong>.
-                            The HTTP gateway acknowledges receipt immediately (202 Accepted) and pushes to Redis.
-                            A separate pool of background workers consumes the stream, processing events with
-                            idempotency checks to guarantee exactly-once processing effects.
-                        </p>
                     </div>
                 </section>
 
                 <hr className="border-border border-dashed" />
 
-                {/* Project 2 */}
+                {/* Project 2: Ruilmijnwoning */}
                 <section className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
-                        <h2 className="text-2xl font-bold tracking-tight">Legacy Freight API Wrapper</h2>
-                        <div className="flex gap-2 text-xs">
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h2 className="text-2xl font-bold tracking-tight">Ruilmijnwoning Housing Exchange</h2>
+                            <a
+                                href="https://ruilmijnwoning.nl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-primary hover:underline flex items-center gap-1"
+                            >
+                                Visit Site <ExternalLink size={12} />
+                            </a>
+                        </div>
+                        <div className="flex gap-2 text-xs flex-wrap">
+                            <span className="bg-muted px-2 py-1 rounded-md">Node.js</span>
                             <span className="bg-muted px-2 py-1 rounded-md">Express.js</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">SOAP/XML</span>
-                            <span className="bg-muted px-2 py-1 rounded-md">Zod</span>
+                            <span className="bg-muted px-2 py-1 rounded-md">MySQL</span>
                         </div>
                     </div>
 
                     <div className="prose dark:prose-invert text-sm text-muted-foreground leading-relaxed max-w-none">
                         <p>
-                            A modern RESTful API wrapper around a 15-year old legacy SOAP/XML logistics system, enabling frontend teams to iterate faster without dealing with XML parsing or inconsistent error codes.
+                            A dedicated API service for a Dutch housing exchange platform used by tenants and housing corporations.
+                            The system facilitates the matching and exchange of rental properties across the Netherlands.
                         </p>
-                        <h3 className="text-foreground font-semibold mt-4 text-base">Key Challenges</h3>
+                        <h3 className="text-foreground font-semibold mt-4 text-base">Key Contributions</h3>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>Legacy system had no documentation and frequent downtime.</li>
-                            <li>Inconsistent response formats handling null/undefined.</li>
+                            <li>Architected secure RESTful APIs to handle sensitive tenant data.</li>
+                            <li>Optimized database queries to handle complex matching algorithms between properties.</li>
+                            <li>Ensured GDPR compliance and secure data handling standards.</li>
                         </ul>
-                        <h3 className="text-foreground font-semibold mt-4 text-base">Solution</h3>
-                        <p>
-                            Implemented a "Schema-on-Read" validation layer using <strong>Zod</strong>.
-                            The wrapper validates every response from the legacy system.
-                            If the legacy system returns unexpected data, the wrapper fails gracefully or returns a default,
-                            protecting the frontend from runtime crashes. Also implemented aggressive caching for static data types.
-                        </p>
                     </div>
                 </section>
 
                 <hr className="border-border border-dashed" />
 
-                <section className="bg-muted/30 p-8 rounded-lg border border-border/50 flex flex-col items-center text-center gap-4">
-                    <h3 className="text-xl font-semibold">Want to see more code?</h3>
-                    <p className="text-sm text-muted-foreground text-center max-w-md">
-                        Check out my internal case studies on system architecture and refactoring patterns.
-                    </p>
-                    <Link
-                        href="/blog"
-                        className="px-5 py-2.5 bg-foreground text-background rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
-                    >
-                        Read Engineering Blog
-                    </Link>
+                {/* Project 3: DataBalk */}
+                <section className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                        <h2 className="text-2xl font-bold tracking-tight">Enterprise Backend Services (DataBalk)</h2>
+                        <div className="flex gap-2 text-xs flex-wrap">
+                            <span className="bg-muted px-2 py-1 rounded-md">Node.js</span>
+                            <span className="bg-muted px-2 py-1 rounded-md">Microservices</span>
+                            <span className="bg-muted px-2 py-1 rounded-md">CI/CD</span>
+                        </div>
+                    </div>
+
+                    <div className="prose dark:prose-invert text-sm text-muted-foreground leading-relaxed max-w-none">
+                        <p>
+                            Currently developing and maintaining backend ecosystem for multiple production products at DataBalk.
+                        </p>
+                        <h3 className="text-foreground font-semibold mt-4 text-base">Key Responsibilities</h3>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li>Managing shared backend components across two concurrent products.</li>
+                            <li>Resolving critical production issues to improve system reliability (SRE).</li>
+                            <li>Collaborating with cross-functional teams to deliver features under tight deadlines in a dynamic environment.</li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </div>

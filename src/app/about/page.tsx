@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { FileText } from 'lucide-react';
+import { FileText, Briefcase, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'About | Saidi M.',
-    description: 'Backend Engineer philosophy, tech stack, and background.',
+    title: 'About | Saidi Hamisi',
+    description: 'Backend Software Engineer specializing in Node.js and ASP.NET Core.',
 };
 
 export default function AboutPage() {
@@ -15,13 +14,12 @@ export default function AboutPage() {
                 <h1 className="text-3xl font-bold tracking-tighter">About Me</h1>
                 <div className="prose dark:prose-invert text-muted-foreground leading-relaxed max-w-none">
                     <p>
-                        I am a Backend Engineer with a focus on building boringly reliable systems.
-                        I specialize in <strong>Node.js</strong>, <strong>SQL</strong>, and distributed architecture.
+                        I am a Backend-focused Software Engineer with <strong>2.5+ years</strong> of professional experience designing and building secure,
+                        scalable, and production-grade APIs.
                     </p>
                     <p>
-                        With a background in high-throughput production environments, I prioritize data integrity,
-                        maintainability, and backward compatibility over chasing the latest trends.
-                        My goal is to write code that is easy to read, easy to delete, and hard to break.
+                        I currently work at <strong>DataBalk</strong> (South Africa), where I build backend services for multiple production products using Node.js.
+                        My expertise lies in real-time systems, financial workflows, and multi-tenant architectures.
                     </p>
                 </div>
 
@@ -37,34 +35,68 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Philosophy / How I Work */}
+            {/* Experience Timeline */}
             <section className="flex flex-col gap-6">
-                <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">How I Work</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
-                        <h3 className="font-semibold mb-2">Correctness &gt; Speed</h3>
+                <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2 flex items-center gap-2">
+                    <Briefcase size={20} /> Experience
+                </h2>
+                <div className="flex flex-col gap-8 border-l border-border ml-2 pl-6 relative">
+
+                    {/* Job 1 */}
+                    <div className="flex flex-col gap-1 relative">
+                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground">Software Developer</h3>
+                        <span className="text-sm text-primary">DataBalk (Franschhoek, South Africa)</span>
+                        <span className="text-xs text-muted-foreground mb-2">Aug 2024 – Present</span>
                         <p className="text-sm text-muted-foreground">
-                            I prefer code that is boring, readable, and correct over clever optimizations that are hard to debug at 3 AM.
+                            Developing and maintaining backend services for multiple production products using Node.js.
                         </p>
                     </div>
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
-                        <h3 className="font-semibold mb-2">Database = Source of Truth</h3>
+
+                    {/* Job 2 */}
+                    <div className="flex flex-col gap-1 relative">
+                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground">Software Developer (Contract)</h3>
+                        <span className="text-sm">CATS-NET (Tanzania)</span>
+                        <span className="text-xs text-muted-foreground mb-2">Sep 2023 – Aug 2025</span>
                         <p className="text-sm text-muted-foreground">
-                            I rely on foreign keys, constraints, and ACID transactions to ensure data integrity.
+                            Built backend systems using ASP.NET Core, including a WhatsApp-based ticketing platform and RBAC implementations.
                         </p>
                     </div>
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
-                        <h3 className="font-semibold mb-2">Code is a Liability</h3>
+
+                    {/* Job 3 */}
+                    <div className="flex flex-col gap-1 relative">
+                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground">IT Executive</h3>
+                        <span className="text-sm">Airtel (Tanzania)</span>
+                        <span className="text-xs text-muted-foreground mb-2">Dec 2023 – Aug 2024</span>
                         <p className="text-sm text-muted-foreground">
-                            The best code is the code I didn't have to write. I aggressively prune features and unnecessary dependencies.
+                            Monitored mobile money production systems and collaborated with engineering teams on critical alerts.
                         </p>
                     </div>
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
-                        <h3 className="font-semibold mb-2">Logging with Intent</h3>
+
+                    {/* Job 4 */}
+                    <div className="flex flex-col gap-1 relative">
+                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground">Back-End Developer</h3>
+                        <span className="text-sm">iPFSoftware’s (Tanzania)</span>
+                        <span className="text-xs text-muted-foreground mb-2">Aug 2022 – Nov 2022</span>
                         <p className="text-sm text-muted-foreground">
-                            Logs should answer "what happened?" and "why?". I structure logs (JSON) so they are machine-queryable.
+                            Built secure RESTful APIs using Node.js and automated deployment pipelines.
                         </p>
                     </div>
+                </div>
+            </section>
+
+            {/* Education */}
+            <section className="flex flex-col gap-6">
+                <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2 flex items-center gap-2">
+                    <GraduationCap size={20} /> Education
+                </h2>
+                <div className="flex flex-col gap-1">
+                    <h3 className="font-semibold">Bachelor of Science in Software Engineering</h3>
+                    <span className="text-sm text-muted-foreground">University of Dodoma, Tanzania</span>
+                    <span className="text-xs text-muted-foreground">2019 – 2023</span>
                 </div>
             </section>
 
@@ -73,28 +105,29 @@ export default function AboutPage() {
                 <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">Tech Stack</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
                     <div className="flex flex-col gap-3">
-                        <span className="font-semibold text-foreground">Backend</span>
+                        <span className="font-semibold text-foreground">Languages</span>
                         <ul className="flex flex-col gap-2 text-muted-foreground">
-                            <li>Node.js</li>
-                            <li>Express.js / Fastify</li>
-                            <li>Go (Basic)</li>
+                            <li>JavaScript (Node.js)</li>
+                            <li>TypeScript</li>
+                            <li>C# (ASP.NET Core)</li>
+                            <li>SQL</li>
                         </ul>
                     </div>
                     <div className="flex flex-col gap-3">
-                        <span className="font-semibold text-foreground">Database</span>
+                        <span className="font-semibold text-foreground">Infrastructure & DB</span>
                         <ul className="flex flex-col gap-2 text-muted-foreground">
-                            <li>PostgreSQL</li>
-                            <li>MSSQL</li>
-                            <li>Redis</li>
+                            <li>PostgreSQL / MSSQL</li>
+                            <li>MongoDB / Redis</li>
+                            <li>Docker / AWS</li>
+                            <li>GitHub Actions (CI/CD)</li>
                         </ul>
                     </div>
                     <div className="flex flex-col gap-3">
-                        <span className="font-semibold text-foreground">Ops</span>
+                        <span className="font-semibold text-foreground">Frameworks</span>
                         <ul className="flex flex-col gap-2 text-muted-foreground">
-                            <li>Docker</li>
-                            <li>Nginx</li>
-                            <li>CI/CD (GitHub Actions)</li>
-                            <li>Linux</li>
+                            <li>Express.js</li>
+                            <li>Next.js</li>
+                            <li>ASP.NET Core</li>
                         </ul>
                     </div>
                 </div>

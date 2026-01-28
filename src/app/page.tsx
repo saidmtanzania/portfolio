@@ -9,14 +9,13 @@ export default function Home() {
     <div className="flex flex-col gap-16 animate-fade-in delay-100 pb-20">
       {/* Hero / Bio */}
       <section className="flex flex-col gap-6 pt-10">
-        <h1 className="text-4xl font-extrabold tracking-tighter">Backend Engineer</h1>
+        <h1 className="text-4xl font-extrabold tracking-tighter">Saidi Hamisi</h1>
         <div className="prose dark:prose-invert text-muted-foreground leading-relaxed max-w-xl">
           <p>
-            I build the logical engines behind web applications.
-            Detailed-oriented Backend Engineer specializing in <strong>Node.js</strong> and <strong>System Architecture</strong>.
+            <strong>Backend Software Engineer</strong> with 2.5+ years of experience designing secure, scalable APIs.
           </p>
           <p>
-            Currently focused on reliable distributed systems and data integrity.
+            Specializing in <strong>Node.js</strong> and <strong>ASP.NET Core</strong>. Currently building production-grade services at <strong>DataBalk</strong>.
           </p>
         </div>
         <div className="flex gap-4 pt-2">

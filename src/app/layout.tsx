@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Saidi M. | Backend Developer',
-  description: 'Minimalist portfolio and blog of Saidi M.',
+  title: {
+    template: '%s | Saidi Hamisi',
+    default: 'Saidi Hamisi | Backend Engineer',
+  },
+  description: 'Backend Software Engineer (Node.js & ASP.NET Core).',
 };
 
 export default function RootLayout({
