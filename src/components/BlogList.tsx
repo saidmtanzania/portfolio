@@ -87,7 +87,7 @@ export function BlogList({ posts }: BlogListProps) {
                                                 key={tag}
                                                 className="inline-flex items-center rounded-full border border-border bg-muted/30 px-2.5 py-1 text-[11px] font-medium text-foreground/80"
                                             >
-                                                #{tag}
+                                                {tag}
                                             </span>
                                         ))}
                                     </div>

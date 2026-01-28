@@ -64,7 +64,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
                                         key={tag}
                                         className="inline-flex items-center rounded-full border border-border bg-background/60 px-2.5 py-1 text-[11px] font-medium text-foreground/80"
                                     >
-                                        #{tag}
+                                        {tag}
                                     </span>
                                 ))}
                             </div>
