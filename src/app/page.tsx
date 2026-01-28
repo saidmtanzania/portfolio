@@ -21,13 +21,13 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 pt-2">
           <Link
             href="/projects"
-            className="px-5 py-2.5 bg-foreground text-background rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+            className="btn-primary inline-flex items-center justify-center px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
           >
             View Work
           </Link>
           <Link
             href="/about"
-            className="px-5 py-2.5 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors"
+            className="inline-flex items-center justify-center px-5 py-2.5 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors"
           >
             About Me
           </Link>

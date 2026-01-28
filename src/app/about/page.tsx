@@ -27,7 +27,7 @@ export default function AboutPage() {
                     <a
                         href="/resume.pdf"
                         target="_blank"
-                        className="flex items-center gap-2 px-5 py-2.5 bg-foreground text-background rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+                        className="btn-primary flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                         <FileText size={16} />
                         Download CV

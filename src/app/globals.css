@@ -66,19 +66,19 @@ a {
   color: inherit;
 }
 
-.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-color: color-mix(in oklab, var(--primary) 35%, transparent);
 }
 
-.dark .prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.dark .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--foreground);
   text-decoration-color: color-mix(in oklab, var(--foreground) 35%, transparent);
 }
 
-.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--foreground);
 }
 
@@ -114,4 +114,15 @@ a {
 
 .delay-300 {
   animation-delay: 300ms;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #18181b;
+  color: #fafafa;
+}
+
+.dark .btn-primary {
+  background-color: #fafafa;
+  color: #18181b;
 }
