@@ -51,27 +51,55 @@ export function BlogList({ posts }: BlogListProps) {
     };
 
     return (
-        <div className="flex flex-col gap-8 mt-4">
+        <div className="flex flex-col gap-8">
             {/* Posts List */}
-            <div className="flex flex-col gap-8">
+            <div className="grid grid-cols-1 gap-4">
                 {currentPosts.length > 0 ? (
                     currentPosts.map((post) => (
-                        <article key={post.slug} className="flex flex-col gap-2 animate-fade-in">
-                            <Link href={`/blog/${post.slug}`} className="group">
-                                <h2 className="text-xl font-semibold group-hover:underline decoration-1 underline-offset-4 decoration-muted-foreground/50">{post.title}</h2>
-                            </Link>
-                            <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                                <time dateTime={post.date}>{post.date}</time>
-                                <span>•</span>
-                                <div className="flex gap-2">
-                                    {post.tags?.map(tag => (
-                                        <span key={tag} className="bg-muted px-1.5 py-0.5 rounded-sm">#{tag}</span>
-                                    ))}
+                        <article key={post.slug} className="animate-fade-in">
+                            <Link
+                                href={`/blog/${post.slug}`}
+                                className={cn(
+                                    "group block rounded-2xl border border-border bg-background/40 p-5 sm:p-6",
+                                    "transition-all duration-200 hover:bg-muted/30 hover:shadow-sm"
+                                )}
+                            >
+                                <div className="flex items-start justify-between gap-4">
+                                    <h2 className="text-lg sm:text-xl font-semibold tracking-tight group-hover:underline decoration-1 underline-offset-4 decoration-border">
+                                        {post.title}
+                                    </h2>
+                                    <time
+                                        dateTime={post.date}
+                                        className="text-xs text-muted-foreground whitespace-nowrap pt-1"
+                                    >
+                                        {post.date}
+                                    </time>
                                 </div>
-                            </div>
-                            <p className="text-muted-foreground text-sm leading-relaxed max-w-lg">
-                                {post.excerpt}
-                            </p>
+
+                                <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                                    {post.excerpt}
+                                </p>
+
+                                {post.tags && post.tags.length > 0 && (
+                                    <div className="mt-4 flex flex-wrap gap-2">
+                                        {post.tags.map((tag) => (
+                                            <span
+                                                key={tag}
+                                                className="inline-flex items-center rounded-full border border-border bg-muted/30 px-2.5 py-1 text-[11px] font-medium text-foreground/80"
+                                            >
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+
+                                <div className="mt-4 text-sm font-medium text-foreground/90">
+                                    <span className="inline-flex items-center gap-1">
+                                        Read article
+                                        <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                                    </span>
+                                </div>
+                            </Link>
                         </article>
                     ))
                 ) : (

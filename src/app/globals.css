@@ -15,6 +15,7 @@
   /* Zinc 900 */
   --primary-foreground: #fafafa;
   /* Zinc 50 */
+  color-scheme: light;
 }
 
 /* 
@@ -36,6 +37,7 @@
   /* Zinc 50 */
   --primary-foreground: #18181b;
   /* Zinc 900 */
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -57,6 +59,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+}
+
+/* Better default contrast + nicer markdown */
+a {
+  color: inherit;
+}
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in oklab, var(--primary) 35%, transparent);
+}
+
+.dark .prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: var(--foreground);
+  text-decoration-color: color-mix(in oklab, var(--foreground) 35%, transparent);
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: var(--foreground);
 }
 
 ::selection {
