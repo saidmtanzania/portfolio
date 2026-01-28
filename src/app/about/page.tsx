@@ -10,10 +10,10 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col gap-12 animate-fade-in delay-100 mb-20">
             {/* Introduction */}
-            <section className="flex flex-col gap-6">
+            <section className="flex flex-col gap-4 sm:gap-6 text-left">
                 <h1 className="text-3xl font-bold tracking-tighter">About Me</h1>
-                <div className="prose dark:prose-invert text-muted-foreground leading-relaxed max-w-none">
-                    <p>
+                <div className="text-muted-foreground leading-relaxed max-w-none text-base">
+                    <p className="mb-4">
                         I am a Backend-focused Software Engineer with <strong>2.5+ years</strong> of professional experience designing and building secure,
                         scalable, and production-grade APIs.
                     </p>
@@ -36,52 +36,52 @@ export default function AboutPage() {
             </section>
 
             {/* Experience Timeline */}
-            <section className="flex flex-col gap-6">
+            <section className="flex flex-col gap-6 text-left">
                 <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2 flex items-center gap-2">
                     <Briefcase size={20} /> Experience
                 </h2>
-                <div className="flex flex-col gap-8 border-l border-border ml-2 pl-6 relative">
+                <div className="flex flex-col gap-8 border-l border-border ml-1.5 sm:ml-2 pl-4 sm:pl-6 relative">
 
                     {/* Job 1 */}
                     <div className="flex flex-col gap-1 relative">
-                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
-                        <h3 className="font-semibold text-foreground">Software Developer</h3>
+                        <span className="absolute -left-[21px] sm:-left-[30px] top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground text-base sm:text-lg">Software Developer</h3>
                         <span className="text-sm text-primary">DataBalk (Franschhoek, South Africa)</span>
                         <span className="text-xs text-muted-foreground mb-2">Aug 2024 – Present</span>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             Developing and maintaining backend services for multiple production products using Node.js.
                         </p>
                     </div>
 
                     {/* Job 2 */}
                     <div className="flex flex-col gap-1 relative">
-                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
-                        <h3 className="font-semibold text-foreground">Software Developer (Contract)</h3>
+                        <span className="absolute -left-[21px] sm:-left-[30px] top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground text-base sm:text-lg">Software Developer (Contract)</h3>
                         <span className="text-sm">CATS-NET (Tanzania)</span>
                         <span className="text-xs text-muted-foreground mb-2">Sep 2023 – Aug 2025</span>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             Built backend systems using ASP.NET Core, including a WhatsApp-based ticketing platform and RBAC implementations.
                         </p>
                     </div>
 
                     {/* Job 3 */}
                     <div className="flex flex-col gap-1 relative">
-                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
-                        <h3 className="font-semibold text-foreground">IT Executive</h3>
+                        <span className="absolute -left-[21px] sm:-left-[30px] top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground text-base sm:text-lg">IT Executive</h3>
                         <span className="text-sm">Airtel (Tanzania)</span>
                         <span className="text-xs text-muted-foreground mb-2">Dec 2023 – Aug 2024</span>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             Monitored mobile money production systems and collaborated with engineering teams on critical alerts.
                         </p>
                     </div>
 
                     {/* Job 4 */}
                     <div className="flex flex-col gap-1 relative">
-                        <span className="absolute -left-[30px] top-1.5 w-3 h-3 rounded-full bg-border" />
-                        <h3 className="font-semibold text-foreground">Back-End Developer</h3>
+                        <span className="absolute -left-[21px] sm:-left-[30px] top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-border" />
+                        <h3 className="font-semibold text-foreground text-base sm:text-lg">Back-End Developer</h3>
                         <span className="text-sm">iPFSoftware’s (Tanzania)</span>
                         <span className="text-xs text-muted-foreground mb-2">Aug 2022 – Nov 2022</span>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                             Built secure RESTful APIs using Node.js and automated deployment pipelines.
                         </p>
                     </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
             </section>
 
             {/* Education */}
-            <section className="flex flex-col gap-6">
+            <section className="flex flex-col gap-6 text-left">
                 <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2 flex items-center gap-2">
                     <GraduationCap size={20} /> Education
                 </h2>
@@ -101,12 +101,12 @@ export default function AboutPage() {
             </section>
 
             {/* Tech Stack */}
-            <section className="flex flex-col gap-6">
+            <section className="flex flex-col gap-6 text-left">
                 <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">Tech Stack</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-sm">
                     <div className="flex flex-col gap-3">
                         <span className="font-semibold text-foreground">Languages</span>
-                        <ul className="flex flex-col gap-2 text-muted-foreground">
+                        <ul className="flex flex-col gap-2 text-muted-foreground list-disc list-inside sm:list-none">
                             <li>JavaScript (Node.js)</li>
                             <li>TypeScript</li>
                             <li>C# (ASP.NET Core)</li>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex flex-col gap-3">
                         <span className="font-semibold text-foreground">Infrastructure & DB</span>
-                        <ul className="flex flex-col gap-2 text-muted-foreground">
+                        <ul className="flex flex-col gap-2 text-muted-foreground list-disc list-inside sm:list-none">
                             <li>PostgreSQL / MSSQL</li>
                             <li>MongoDB / Redis</li>
                             <li>Docker / AWS</li>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex flex-col gap-3">
                         <span className="font-semibold text-foreground">Frameworks</span>
-                        <ul className="flex flex-col gap-2 text-muted-foreground">
+                        <ul className="flex flex-col gap-2 text-muted-foreground list-disc list-inside sm:list-none">
                             <li>Express.js</li>
                             <li>Next.js</li>
                             <li>ASP.NET Core</li>

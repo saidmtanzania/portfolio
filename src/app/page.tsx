@@ -6,19 +6,19 @@ export default function Home() {
   const recentPosts = allPosts.slice(0, 3);
 
   return (
-    <div className="flex flex-col gap-16 animate-fade-in delay-100 pb-20">
+    <div className="flex flex-col gap-12 sm:gap-16 animate-fade-in delay-100 pb-20">
       {/* Hero / Bio */}
-      <section className="flex flex-col gap-6 pt-10">
-        <h1 className="text-4xl font-extrabold tracking-tighter">Saidi Hamisi</h1>
-        <div className="prose dark:prose-invert text-muted-foreground leading-relaxed max-w-xl">
-          <p>
+      <section className="flex flex-col gap-4 sm:gap-6 pt-6 sm:pt-10 text-left">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tighter">Saidi Hamisi</h1>
+        <div className="text-muted-foreground leading-relaxed max-w-xl text-base sm:text-lg">
+          <p className="mb-4">
             <strong>Backend Software Engineer</strong> with 2.5+ years of experience designing secure, scalable APIs.
           </p>
           <p>
             Specializing in <strong>Node.js</strong> and <strong>ASP.NET Core</strong>. Currently building production-grade services at <strong>DataBalk</strong>.
           </p>
         </div>
-        <div className="flex gap-4 pt-2">
+        <div className="flex flex-wrap gap-4 pt-2">
           <Link
             href="/projects"
             className="px-5 py-2.5 bg-foreground text-background rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
@@ -36,18 +36,18 @@ export default function Home() {
 
       {/* Blog Teaser */}
       <section className="flex flex-col gap-6">
-        <h2 className="text-xl font-bold tracking-tight">Recent Writing</h2>
+        <h2 className="text-xl font-bold tracking-tight text-left">Recent Writing</h2>
         <div className="flex flex-col gap-4">
           {recentPosts.length > 0 ? (
             recentPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col gap-1 p-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors"
+                className="group flex flex-col gap-1 p-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors text-left"
               >
-                <div className="flex justify-between items-baseline">
+                <div className="flex justify-between items-baseline flex-wrap gap-2">
                   <h3 className="font-medium group-hover:text-primary transition-colors">{post.title}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-4">{post.date}</span>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap">{post.date}</span>
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
                   {post.excerpt}
