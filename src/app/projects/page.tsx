@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'Projects | Saidi Hamisi',
+    title: 'Projects',
     description: 'Selected backend engineering projects: WhatsApp Integration, Housing Exchange APIs, and more.',
 };
 

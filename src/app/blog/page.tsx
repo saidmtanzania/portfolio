@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { BlogList } from '@/components/BlogList';
 
 export const metadata: Metadata = {
-    title: 'Blog | Saidi Hamisi',
+    title: 'Blog',
     description: 'Writings on backend development, software architecture, and technology.',
 };
 

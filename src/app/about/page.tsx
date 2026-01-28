@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { FileText, Briefcase, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: 'About | Saidi Hamisi',
+    title: 'About',
     description: 'Backend Software Engineer specializing in Node.js and ASP.NET Core.',
 };
 
