@@ -45,13 +45,25 @@ export default function Home() {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col gap-1 p-4 -mx-4 rounded-lg hover:bg-muted/50 transition-colors text-left"
               >
-                <div className="flex justify-between items-baseline flex-wrap gap-2">
-                  <h3 className="font-medium group-hover:text-primary transition-colors">{post.title}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap">{post.date}</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-2">
+                  <h3 className="font-medium group-hover:text-primary transition-colors line-clamp-2 sm:line-clamp-none">{post.title}</h3>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap self-start sm:self-auto">{post.date}</span>
                 </div>
                 <p className="text-sm text-muted-foreground line-clamp-2">
                   {post.excerpt}
                 </p>
+                {post.tags && post.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {post.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center rounded-full border border-border bg-muted/30 px-2.5 py-1 text-[11px] font-medium text-foreground/80"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </Link>
             ))
           ) : (
