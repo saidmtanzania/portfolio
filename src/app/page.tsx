@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tighter">Saidi Hamisi</h1>
         <div className="text-muted-foreground leading-relaxed max-w-xl text-base sm:text-lg">
           <p className="mb-4">
-            <strong>Backend Software Engineer</strong> with 2.5+ years of experience designing secure, scalable APIs.
+            <strong>Backend Software Engineer</strong> with 3+ years of experience designing secure, scalable APIs.
           </p>
           <p>
             Specializing in <strong>Node.js</strong> and <strong>ASP.NET Core</strong>. Currently building production-grade services at <strong>DataBalk</strong>.
