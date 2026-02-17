@@ -14,7 +14,7 @@ export default function AboutPage() {
                 <h1 className="text-3xl font-bold tracking-tighter">About Me</h1>
                 <div className="text-muted-foreground leading-relaxed max-w-none text-base">
                     <p className="mb-4">
-                        I am a Backend-focused Software Engineer with <strong>2.5+ years</strong> of professional experience designing and building secure,
+                        I am a Backend-focused Software Engineer with <strong>3+ years</strong> of professional experience designing and building secure,
                         scalable, and production-grade APIs.
                     </p>
                     <p>
