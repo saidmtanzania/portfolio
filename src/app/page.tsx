@@ -12,10 +12,13 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tighter">Saidi Hamisi</h1>
         <div className="text-muted-foreground leading-relaxed max-w-xl text-base sm:text-lg">
           <p className="mb-4">
-            <strong>Backend Software Engineer</strong> with 3+ years of experience designing secure, scalable APIs.
+            <strong>Backend Software Engineer</strong> with 3+ years of experience designing and maintaining scalable backend systems and APIs using <strong>Node.js</strong>, <strong>NestJS</strong>, and <strong>ASP.NET Core</strong>.
+          </p>
+          <p className="mb-4">
+            Experienced in building and supporting production systems across fintech, telecom, and web platforms, with strong focus on clean architecture, performance, and system reliability.
           </p>
           <p>
-            Specializing in <strong>Node.js</strong> and <strong>ASP.NET Core</strong>. Currently building production-grade services at <strong>DataBalk</strong>.
+            Currently building scalable backend services and a multi-tenant SaaS platform while continuously expanding expertise in modern backend architecture and cloud-based deployments.
           </p>
         </div>
         <div className="flex flex-wrap gap-4 pt-2">
